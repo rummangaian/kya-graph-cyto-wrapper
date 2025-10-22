@@ -1,17 +1,30 @@
 {
   "name": "kya-instance-cytoscape-lib",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "types": "dist/CytoscapeService.d.ts",
+  "exports": {
+    "import": "./dist/bundle.esm.js",
+    "require": "./dist/bundle.cjs.js"
+  },
   "scripts": {
     "build": "tsc"
   },
-  "peerDependencies": {
-    "cytoscape": "^3.0.0"
+  "dependencies": {
+    "cytoscape": "^3.0.0",
+    "cytoscape-cola": "^2.5.1",
+    "cytoscape-euler": "^1.2.2"
   },
   "devDependencies": {
     "rollup": "^4.52.5",
     "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.9.3"
+  },
+  "author": "Rumman",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/kya-instance-cytoscape-lib.git"
   }
 }
