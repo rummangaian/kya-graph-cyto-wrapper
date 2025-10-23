@@ -1,14 +1,19 @@
+# 🧩 kya-instance-cytoscape-lib
 
-# kya-instance-cytoscape-lib
-Cytoscape Wrapper
+A lightweight **Cytoscape.js wrapper** that simplifies graph initialization and configuration.  
+Designed to quickly render interactive graph visualizations with clean setup.
+
+---
+
+## 📦 Installation
+
+create .npmrc file in root of the repo and add @mobius:registry=http://nexus-lib.aidtaas.com:8081/repository/npm/
+run =>  npm i @mobius/kya-instance-cytoscape-lib
 
 
-# index.ts
-import {
-  createCytoscapeInstance,
-} from "kya-instance-cytoscape-lib";
-
-
+🚀 Quick Start
+index.ts
+import { createCytoscapeInstance } from "kya-instance-cytoscape-lib";
 
 createCytoscapeInstance(document.getElementById("cy"), {
   elements: [
@@ -19,43 +24,41 @@ createCytoscapeInstance(document.getElementById("cy"), {
     { data: { source: "b", target: "c" } },
   ],
   layout: {
-    name: "cose", 
+    name: "cose",
     springLength: 150,
     springCoeff: 0.03,
-    mass: 50, 
-    gravity: -2, 
+    mass: 50,
+    gravity: -2,
     pull: 0.0002,
-    theta: 0.7, 
-    dragCoeff: 0.02, 
+    theta: 0.7,
+    dragCoeff: 0.02,
     movementThreshold: 1,
     timeStep: 20,
-    refresh: 20, 
-    animate: false, 
+    refresh: 20,
+    animate: false,
     maxIterations: 1000,
     maxSimulationTime: 4000,
     fit: true,
-    padding: 50, 
+    padding: 50,
   },
 });
 
-# index.html
+index.html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Test Cytoscape Lib</title>
-  <style>
-    #cy {
-      width: 800px;
-      height: 600px;
-      border: 1px solid #ccc;
-    }
-  </style>
-</head>
-<body>
-  <div id="cy"></div>
-  <script type="module" src="./index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test Cytoscape Lib</title>
+    <style>
+      #cy {
+        width: 800px;
+        height: 600px;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cy"></div>
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
-
-
