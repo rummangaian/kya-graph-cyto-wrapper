@@ -1,5 +1,5 @@
 {
-  "name": "kya-instance-cytoscape-lib",
+  "name": "@mobius/kya-instance-cytoscape-lib",
   "version": "1.0.0",
   "main": "dist/bundle.cjs.js",
   "module": "dist/bundle.esm.js",
